@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+body,html{height:100%;}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+*{font-family: 'PT Sans', sans-serif;}
+.first{
+height:100%;
+background:url("bg-port.jpg");
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+margin-top:-18px;
+margin:-8px;
+}
+.navbar{
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+padding:10%;
+padding-top:0px;
+padding-bottom:0px;
+}
+a{
+color:white;
+text-decoration:none;
+}
+.first h1{color:white;}
+.other{
+animation-name:one;
+animation-duration:3s;
+margin-left:20%;
+border-radius:8px;
+display:grid;
+grid-template-columns:70% 30%;
+}
+@keyframes one{
+0%{margin-top:50000px;}
+100%{margin-top:auto;}
+}
+.buttons>a>button{
+border:none;
+background:dodgerblue;
+color:white;
+padding:2%;
+font-size:120%;
+border-radius:5px;
+}
+.buttons>a>button:hover{
+cursor:pointer;
+}
+   </style>
+<script>
+$(document).ready(()=>{
+$("#hi").hide();
+$(".other").mouseenter(()=>{
+$(".other").css("width","60%");
+$(".other").css("padding","6%");
+$(".other").css("background","white");
+$(".other h1").css("color","black");
+$("#hi").show();
+})
+$(".other").mouseleave(()=>{
+$(".other").css("background","transparent");
+$(".other h1").css("color","white");
+$(".other").css("width","auto");
+$(".other").css("padding","0px");
+$("#hi").hide();
+})
+})
+</script>
+</head>
+<body>
+<div class="first">
+ <div class="navbar">
+<h1 style="cursor:pointer;"><span style="color:dodgerblue;">Ish</span><span style="color:white;">aan</span> 
+<span style="color:dodgerblue;">Ver</span><span style="color:white;">ma</span></h1>
+<h1><A href="#">Services</a></h1>
+<h1><A href="#">Portfolio</a></h1>
+<h1><A href="#">About</a></h1>
+<h1><A href="#">Contact</a></h1>
+</div><br><Br>
+<div class="other">
+<div>
+<h1 style="font-size:300%;">Hi,<br>I'm Ishaan Verma,<br>Artist,Scientist & Engineer</h1><br>
+<div class="buttons"><a href=""><button>Hire Me</button></a>&nbsp; &nbsp;<a href=""><button>Download My CV</button></a></div>
+</div>
+<div id="hi">
+<img src="pic.jpg" />
+</div>
+</div>
+</div>
+<div class="second">
+<h1>True</h1>
+</div>
+</body>
+</html>
